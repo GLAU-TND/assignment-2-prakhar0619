@@ -2,10 +2,30 @@
  *  Created by IntelliJ IDEA.
  *  User: Vaibhav
  *  Date: 23-Mar-20
- *  Time: 7:13 PM
+ *  Time: 7:15 PM
  */
-package problem3.main;
+package problem2.main;
+
+import problem1.mybst.MyBinarySearchTree;
+
+import java.util.Scanner;
+
 // executable class
-// use problem5.student.Student class to create object of student
+// use problem1.mybst.MyBinarySearchTree class for creating binary tree
 public class MyMain {
+    public static void main(String[] args) {
+        MyBinarySearchTree MyBinarySearchTree = new MyBinarySearchTree();
+        Scanner sc =   new Scanner(System.in);
+
+        int inputs = 7;
+        while (inputs > 0) {
+            MyBinarySearchTree.add(sc.nextInt());
+            inputs--;
+
+        }
+        MyBinarySearchTree.pre(MyBinarySearchTree.root);
+        System.out.println();
+        MyBinarySearchTree.post(MyBinarySearchTree.root);
+
+    }
 }
